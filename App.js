@@ -1,11 +1,8 @@
-
-
-
-// ReactElement(object)=> HTML(browser Understands)
-
+import React from "react";
+import ReactDOM from "react-dom/client";
 const parentElement = React.createElement('div', { id: "header" }, 
     [React.createElement('div', { id: "child" },[
-    React.createElement('h1', {}, 'React Element is rendering in Browser'),
+    React.createElement('h1', {}, 'React Learning.😍'),
     React.createElement('h2', {}, 'React Element h2 is rendering in Browser')]),
     React.createElement('div', { id: "child2" },[
     React.createElement('h1', {}, 'React Element2 is rendering in Browser'),
