@@ -1,16 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const parentElement = React.createElement('div', { id: "header" }, 
-    [React.createElement('div', { id: "child" },[
-    React.createElement('h1', {}, 'React Learning.😍'),
-    React.createElement('h2', {}, 'React Element h2 is rendering in Browser')]),
-    React.createElement('div', { id: "child2" },[
-    React.createElement('h1', {}, 'React Element2 is rendering in Browser'),
-    React.createElement('h2', {}, 'React Element h2 is rendering in Browser')])
-    ])
+
+// JSX(transpiled befor it reaches the JS engine) - parcel-babel
+
+// JSX => babel transpiles it to React.createElement => ReactElement(JS object) => HTMLElement(Render)
+
+// React Element
+const Header = React.createElement('h2', { id: "header" }, "Hello World from React"); 
+
+// React functional Component
+const Title = () => (<h1 className="head" 
+tabIndex="1">Hello world from React</h1>)
+console.log(Title)
+
+// React functional Component
+const HeadngComponet = () => (
+     <div id="container">
+         <Title />
+         <h1 className="head">Return jsx React </h1>
+     </div>
+);
 
 
-const header = React.createElement('h2', { id: "header" }, "Hello World from React");
-console.log(parentElement)
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parentElement);
+root.render(<HeadngComponet />);
